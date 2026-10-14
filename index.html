@@ -3,175 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paket Hosting Pilihan</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background: white;
-        }
-
-        h2 {
-            color: #439bc5;
-            font-size: 22px;
-            margin-bottom: 20px;
-        }
-
-        .container-paket {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            gap: 15px;
-            width: 100%;
-            min-width: 720px;
-        }
-
-        .paket {
-            flex: 1;
-            min-width: 0;
-            background: white;
-            border: 1px solid #ddd;
-            box-shadow: 0 2px 6px #ddd;
-        }
-
-        .header {
-            color: white;
-            text-align: center;
-            padding: 20px 5px;
-        }
-
-        .header h3 {
-            margin: 0 0 8px;
-            font-size: 17px;
-        }
-
-        .header p {
-            margin: 0;
-            font-size: 14px;
-        }
-
-        .free .header,
-        .free button {
-            background: #2196f3;
-        }
-
-        .premium .header,
-        .premium button {
-            background: #ff9800;
-        }
-
-        .profesional .header,
-        .profesional button {
-            background: green;
-        }
-
-        .isi {
-            padding: 0 10px 10px;
-        }
-
-        .isi p {
-            padding: 12px 0;
-            margin: 0;
-            font-size: 14px;
-            color: #444;
-            border-bottom: 1px solid #eee;
-        }
-
-        button {
-            width: 100%;
-            border: none;
-            color: white;
-            font-weight: bold;
-            font-size: 14px;
-            padding: 13px 5px;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            opacity: 0.85;
-        }
-
-        .area-paket {
-            width: 100%;
-            overflow-x: auto;
-            padding: 3px 3px 12px;
-        }
-    </style>
+    <title>Tabel Data Siswa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <h2>Paket Hosting Pilihan</h2>
+    <h2>Tabel Data Siswa</h2>
 
-    <div class="area-paket">
-        <div class="container-paket">
+    <table>
+        <thead>
+            <tr>
+                <th>NAMA</th>
+                <th>NIM</th>
+                <th>ALAMAT</th>
+                <th>JURUSAN</th>
+                <th>TELPON</th>
+            </tr>
+        </thead>
 
-            <!-- Paket Free -->
-            <div class="paket free">
-                <div class="header">
-                    <h3>Paket Free</h3>
-                    <p>Gratis</p>
-                </div>
+        <tbody>
+            <tr>
+                <td><span tabindex="0">Arsy Adinda</span></td>
+                <td><span tabindex="0">2018001</span></td>
+                <td><span tabindex="0">Jakarta</span></td>
+                <td><span tabindex="0">Teknik Informatika</span></td>
+                <td><span tabindex="0">0853 456xxx</span></td>
+            </tr>
 
-                <div class="isi">
-                    <p>Batas Waktu 3 Bulan</p>
-                    <p>Kapasitas 200 MB</p>
-                    <p>Tidak ada backup data</p>
-                    <button onclick="pesan('Paket Free')">
-                        Pesan Sekarang
-                    </button>
-                </div>
-            </div>
+            <tr>
+                <td><span tabindex="0">Adi Bagus S</span></td>
+                <td><span tabindex="0">2018002</span></td>
+                <td><span tabindex="0">Bandung</span></td>
+                <td><span tabindex="0">Teknik Informasi</span></td>
+                <td><span tabindex="0">0853 487xxx</span></td>
+            </tr>
 
-            <!-- Paket Premium -->
-            <div class="paket premium">
-                <div class="header">
-                    <h3>Paket Premium</h3>
-                    <p>Rp 240.000,-</p>
-                </div>
+            <tr>
+                <td><span tabindex="0">Megawati Ismail</span></td>
+                <td><span tabindex="0">2018003</span></td>
+                <td><span tabindex="0">Makasar</span></td>
+                <td><span tabindex="0">Teknik Komputer dan Jaringan</span></td>
+                <td><span tabindex="0">0853 477xxx</span></td>
+            </tr>
 
-                <div class="isi">
-                    <p>Batas Waktu 1 Tahun</p>
-                    <p>Kapasitas 1 GB</p>
-                    <p>Dilengkapi Backup Data</p>
-                    <button onclick="pesan('Paket Premium')">
-                        Pesan Sekarang
-                    </button>
-                </div>
-            </div>
-
-            <!-- Paket Profesional -->
-            <div class="paket profesional">
-                <div class="header">
-                    <h3>Paket Profesional</h3>
-                    <p>Rp 480.000,-</p>
-                </div>
-
-                <div class="isi">
-                    <p>Batas Waktu 2 Tahun</p>
-                    <p>Kapasitas 3 GB</p>
-                    <p>Dilengkapi Backup Data</p>
-                    <p>Bonus Domain</p>
-                    <button onclick="pesan('Paket Profesional')">
-                        Pesan Sekarang
-                    </button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <script>
-        function pesan(namaPaket) {
-            alert("Kamu memilih " + namaPaket);
-        }
-    </script>
+            <tr>
+                <td><span tabindex="0">Nurhasmi Manohara</span></td>
+                <td><span tabindex="0">2018004</span></td>
+                <td><span tabindex="0">Banjarmasin</span></td>
+                <td><span tabindex="0">Teknik Informasi</span></td>
+                <td><span tabindex="0">0853 455xxx</span></td>
+            </tr>
+        </tbody>
+    </table>
 
 </body>
 </html>
