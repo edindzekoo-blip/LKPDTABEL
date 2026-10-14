@@ -12,153 +12,166 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: white;
             margin: 20px;
+            background: white;
         }
 
-        h3 {
-            color: #3498db;
-            font-size: 18px;
-            margin-bottom: 15px;
+        h2 {
+            color: #439bc5;
+            font-size: 22px;
+            margin-bottom: 20px;
         }
 
-        .container {
+        .container-paket {
             display: flex;
+            flex-direction: row;
             align-items: flex-start;
-            gap: 12px;
-            flex-wrap: wrap;
+            gap: 15px;
+            width: 100%;
+            min-width: 720px;
         }
 
         .paket {
-            width: 200px;
-            border: 1px solid #ddd;
-            box-shadow: 0 2px 5px #ddd;
+            flex: 1;
+            min-width: 0;
             background: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 6px #ddd;
         }
 
-        .free {
-            margin-top: 0;
-        }
-
-        .premium {
-            margin-top: 10px;
-        }
-
-        .profesional {
-            margin-top: 20px;
-        }
-
-        .judul {
+        .header {
             color: white;
             text-align: center;
-            padding: 15px 5px;
-            font-weight: bold;
+            padding: 20px 5px;
+        }
+
+        .header h3 {
+            margin: 0 0 8px;
+            font-size: 17px;
+        }
+
+        .header p {
+            margin: 0;
             font-size: 14px;
         }
 
-        .judul small {
-            display: block;
-            margin-top: 5px;
-            font-weight: normal;
-        }
-
-        .biru {
+        .free .header,
+        .free button {
             background: #2196f3;
         }
 
-        .oranye {
+        .premium .header,
+        .premium button {
             background: #ff9800;
         }
 
-        .hijau {
+        .profesional .header,
+        .profesional button {
             background: green;
         }
 
         .isi {
-            padding: 8px;
-            font-size: 12px;
-            color: #444;
+            padding: 0 10px 10px;
         }
 
         .isi p {
+            padding: 12px 0;
+            margin: 0;
+            font-size: 14px;
+            color: #444;
             border-bottom: 1px solid #eee;
-            padding-bottom: 8px;
-            margin: 0 0 8px;
         }
 
-        .tombol {
-            display: block;
-            text-align: center;
-            text-decoration: none;
+        button {
+            width: 100%;
+            border: none;
             color: white;
-            padding: 10px;
             font-weight: bold;
-            font-size: 12px;
+            font-size: 14px;
+            padding: 13px 5px;
+            margin-top: 10px;
+            cursor: pointer;
         }
 
-        @media (max-width: 680px) {
-            .container {
-                gap: 10px;
-            }
+        button:hover {
+            opacity: 0.85;
+        }
 
-            .paket {
-                width: 100%;
-                max-width: 300px;
-            }
+        .area-paket {
+            width: 100%;
+            overflow-x: auto;
+            padding: 3px 3px 12px;
         }
     </style>
 </head>
 
 <body>
 
-    <h3>Paket Hosting Pilihan</h3>
+    <h2>Paket Hosting Pilihan</h2>
 
-    <div class="container">
+    <div class="area-paket">
+        <div class="container-paket">
 
-        <div class="paket free">
-            <div class="judul biru">
-                Paket Free
-                <small>Gratis</small>
+            <!-- Paket Free -->
+            <div class="paket free">
+                <div class="header">
+                    <h3>Paket Free</h3>
+                    <p>Gratis</p>
+                </div>
+
+                <div class="isi">
+                    <p>Batas Waktu 3 Bulan</p>
+                    <p>Kapasitas 200 MB</p>
+                    <p>Tidak ada backup data</p>
+                    <button onclick="pesan('Paket Free')">
+                        Pesan Sekarang
+                    </button>
+                </div>
             </div>
 
-            <div class="isi">
-                <p>Batas Waktu 3 Bulan</p>
-                <p>Kapasitas 200 MB</p>
-                <p>Tidak ada backup data</p>
-                <a href="#" class="tombol biru">Pesan Sekarang</a>
+            <!-- Paket Premium -->
+            <div class="paket premium">
+                <div class="header">
+                    <h3>Paket Premium</h3>
+                    <p>Rp 240.000,-</p>
+                </div>
+
+                <div class="isi">
+                    <p>Batas Waktu 1 Tahun</p>
+                    <p>Kapasitas 1 GB</p>
+                    <p>Dilengkapi Backup Data</p>
+                    <button onclick="pesan('Paket Premium')">
+                        Pesan Sekarang
+                    </button>
+                </div>
             </div>
+
+            <!-- Paket Profesional -->
+            <div class="paket profesional">
+                <div class="header">
+                    <h3>Paket Profesional</h3>
+                    <p>Rp 480.000,-</p>
+                </div>
+
+                <div class="isi">
+                    <p>Batas Waktu 2 Tahun</p>
+                    <p>Kapasitas 3 GB</p>
+                    <p>Dilengkapi Backup Data</p>
+                    <p>Bonus Domain</p>
+                    <button onclick="pesan('Paket Profesional')">
+                        Pesan Sekarang
+                    </button>
+                </div>
+            </div>
+
         </div>
-
-        <div class="paket premium">
-            <div class="judul oranye">
-                Paket Premium
-                <small>Rp 240.000,-</small>
-            </div>
-
-            <div class="isi">
-                <p>Batas Waktu 1 Tahun</p>
-                <p>Kapasitas 1 GB</p>
-                <p>Dilengkapi Backup Data</p>
-                <a href="#" class="tombol oranye">Pesan Sekarang</a>
-            </div>
-        </div>
-
-        <div class="paket profesional">
-            <div class="judul hijau">
-                Paket Profesional
-                <small>Rp 480.000,-</small>
-            </div>
-
-            <div class="isi">
-                <p>Batas Waktu 2 Tahun</p>
-                <p>Kapasitas 3 GB</p>
-                <p>Dilengkapi Backup Data</p>
-                <p>Bonus Domain</p>
-                <a href="#" class="tombol hijau">Pesan Sekarang</a>
-            </div>
-        </div>
-
     </div>
+
+    <script>
+        function pesan(namaPaket) {
+            alert("Kamu memilih " + namaPaket);
+        }
+    </script>
 
 </body>
 </html>
