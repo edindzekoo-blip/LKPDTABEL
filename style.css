@@ -41,15 +41,26 @@ h3 {
     font-weight: normal;
 }
 
-.biru {
+/* Mengatur warna tombol Pesan Sekarang */
+.tombol,
+.tombol:link,
+.tombol:visited,
+.tombol:hover,
+.tombol:active {
+    color: white;
+    text-decoration: none;
+}
+
+/* Warna setiap tombol */
+.tombol.biru {
     background-color: #2196f3;
 }
 
-.oranye {
+.tombol.oranye {
     background-color: #ff9800;
 }
 
-.hijau {
+.tombol.hijau {
     background-color: green;
 }
 
