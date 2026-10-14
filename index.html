@@ -1,168 +1,192 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paket Hosting Pilihan</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paket Hosting Pilihan</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-            margin: 30px;
-        }
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background: white;
+}
 
-        h3 {
-            color: #2980b9;
-            margin-bottom: 15px;
-        }
+h2 {
+    color: steelblue;
+    margin-bottom: 25px;
+}
 
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 15px;
-            flex-wrap: nowrap;
-            max-width: 850px;
-        }
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+}
 
-        .paket {
-            width: 200px;
-            border: 1px solid #dddddd;
-            box-shadow: 0 2px 5px #dddddd;
-            background-color: white;
-            padding: 5px;
-        }
+.paket {
+    flex: 1;
+    max-width: 270px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    padding: 7px;
+    box-shadow: 0 3px 6px #ccc;
+}
 
-        .header {
-            color: white;
-            text-align: center;
-            padding: 15px 5px;
-        }
+.header {
+    height: 92px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
 
-        .free .header {
-            background-color: #2196f3;
-        }
+.header h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
+}
 
-        .premium .header {
-            background-color: #ff9800;
-        }
+.header p {
+    margin: 0;
+    font-size: 14px;
+}
 
-        .profesional .header {
-            background-color: #008000;
-        }
+.free .header,
+.free .tombol {
+    background: #2196f3;
+}
 
-        .header h4 {
-            margin: 0 0 5px;
-        }
+.premium .header,
+.premium .tombol {
+    background: #ff9800;
+}
 
-        .header p {
-            margin: 0;
-            font-size: 12px;
-        }
+.pro .header,
+.pro .tombol {
+    background: green;
+}
 
-        .isi {
-            padding: 5px;
-            font-size: 12px;
-            color: #444444;
-        }
+.isi {
+    flex: 1;
+}
 
-        .isi p {
-            padding: 8px 3px;
-            margin: 0;
-            border-bottom: 1px solid #eeeeee;
-        }
+.isi p {
+    font-size: 14px;
+    color: #444;
+    padding: 12px 5px;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+}
 
-        .tombol {
-            display: block;
-            text-align: center;
-            text-decoration: none;
-            color: white;
-            padding: 10px 5px;
-            margin-top: 5px;
-            font-size: 12px;
-            font-weight: bold;
-        }
+.tombol {
+    display: block;
+    margin-top: auto;
+    padding: 13px 5px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
 
-        .free .tombol {
-            background-color: #2196f3;
-        }
+.tombol:hover {
+    opacity: 0.8;
+}
 
-        .premium .tombol {
-            background-color: #ff9800;
-        }
+@media (max-width: 600px) {
+    body {
+        margin: 15px;
+    }
 
-        .profesional .tombol {
-            background-color: #008000;
-        }
+    .container {
+        gap: 8px;
+    }
 
-        .tombol:hover {
-            opacity: 0.8;
-        }
-    </style>
+    .paket {
+        padding: 4px;
+    }
+
+    .header h3 {
+        font-size: 13px;
+    }
+
+    .header p,
+    .isi p,
+    .tombol {
+        font-size: 10px;
+    }
+
+    .isi p {
+        padding: 10px 3px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <h3>Paket Hosting Pilihan</h3>
+<h2>Paket Hosting Pilihan</h2>
 
-    <div class="container">
+<div class="container">
 
-        <!-- Paket Free -->
-        <div class="paket free">
-            <div class="header">
-                <h4>Paket Free</h4>
-                <p>Gratis</p>
-            </div>
-
-            <div class="isi">
-                <p>Bebas Waktu 3 Bulan</p>
-                <p>Kapasitas 200 MB</p>
-                <p>Tidak ada backup data</p>
-            </div>
-
-            <a href="#" class="tombol">Pesan Sekarang</a>
+    <div class="paket free">
+        <div class="header">
+            <h3>Paket Free</h3>
+            <p>Gratis</p>
         </div>
 
-        <!-- Paket Premium -->
-        <div class="paket premium">
-            <div class="header">
-                <h4>Paket Premium</h4>
-                <p>Rp 240.000,-</p>
-            </div>
-
-            <div class="isi">
-                <p>Bebas Waktu 1 Tahun</p>
-                <p>Kapasitas 1GB</p>
-                <p>Dilengkapi Backup Data</p>
-            </div>
-
-            <a href="#" class="tombol">Pesan Sekarang</a>
+        <div class="isi">
+            <p>Bebas Waktu 3 Bulan</p>
+            <p>Kapasitas 200 MB</p>
+            <p>Tidak ada backup data</p>
         </div>
 
-        <!-- Paket Profesional -->
-        <div class="paket profesional">
-            <div class="header">
-                <h4>Paket Profesional</h4>
-                <p>Rp 600.000,-</p>
-            </div>
-
-            <div class="isi">
-                <p>Bebas Waktu 2 Tahun</p>
-                <p>Kapasitas 3GB</p>
-                <p>Dilengkapi Backup Data</p>
-                <p>Bonus Domain</p>
-            </div>
-
-            <a href="#" class="tombol">Pesan Sekarang</a>
-        </div>
-
+        <a href="#" class="tombol">Pesan Sekarang</a>
     </div>
+
+    <div class="paket premium">
+        <div class="header">
+            <h3>Paket Premium</h3>
+            <p>Rp 240.000,-</p>
+        </div>
+
+        <div class="isi">
+            <p>Bebas Waktu 1 Tahun</p>
+            <p>Kapasitas 1GB</p>
+            <p>Dilengkapi Backup Data</p>
+        </div>
+
+        <a href="#" class="tombol">Pesan Sekarang</a>
+    </div>
+
+    <div class="paket pro">
+        <div class="header">
+            <h3>Paket Profesional</h3>
+            <p>Rp 600.000,-</p>
+        </div>
+
+        <div class="isi">
+            <p>Bebas Waktu 2 Tahun</p>
+            <p>Kapasitas 3GB</p>
+            <p>Dilengkapi Backup Data</p>
+            <p>Bonus Domain</p>
+        </div>
+
+        <a href="#" class="tombol">Pesan Sekarang</a>
+    </div>
+
+</div>
 
 </body>
 </html>
