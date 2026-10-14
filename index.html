@@ -4,16 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paket Hosting Pilihan</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 30px;
+        }
+
+        h3 {
+            color: #2980b9;
+            margin-bottom: 15px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 15px;
+            flex-wrap: nowrap;
+            max-width: 850px;
+        }
+
+        .paket {
+            width: 200px;
+            border: 1px solid #dddddd;
+            box-shadow: 0 2px 5px #dddddd;
+            background-color: white;
+            padding: 5px;
+        }
+
+        .header {
+            color: white;
+            text-align: center;
+            padding: 15px 5px;
+        }
+
+        .free .header {
+            background-color: #2196f3;
+        }
+
+        .premium .header {
+            background-color: #ff9800;
+        }
+
+        .profesional .header {
+            background-color: #008000;
+        }
+
+        .header h4 {
+            margin: 0 0 5px;
+        }
+
+        .header p {
+            margin: 0;
+            font-size: 12px;
+        }
+
+        .isi {
+            padding: 5px;
+            font-size: 12px;
+            color: #444444;
+        }
+
+        .isi p {
+            padding: 8px 3px;
+            margin: 0;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .tombol {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            padding: 10px 5px;
+            margin-top: 5px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .free .tombol {
+            background-color: #2196f3;
+        }
+
+        .premium .tombol {
+            background-color: #ff9800;
+        }
+
+        .profesional .tombol {
+            background-color: #008000;
+        }
+
+        .tombol:hover {
+            opacity: 0.8;
+        }
+    </style>
 </head>
+
 <body>
 
     <h3>Paket Hosting Pilihan</h3>
 
     <div class="container">
 
-        <div class="paket">
-            <div class="header biru">
+        <!-- Paket Free -->
+        <div class="paket free">
+            <div class="header">
                 <h4>Paket Free</h4>
                 <p>Gratis</p>
             </div>
@@ -24,11 +125,12 @@
                 <p>Tidak ada backup data</p>
             </div>
 
-            <button class="biru">Pesan Sekarang</button>
+            <a href="#" class="tombol">Pesan Sekarang</a>
         </div>
 
-        <div class="paket">
-            <div class="header orange">
+        <!-- Paket Premium -->
+        <div class="paket premium">
+            <div class="header">
                 <h4>Paket Premium</h4>
                 <p>Rp 240.000,-</p>
             </div>
@@ -39,13 +141,14 @@
                 <p>Dilengkapi Backup Data</p>
             </div>
 
-            <button class="orange">Pesan Sekarang</button>
+            <a href="#" class="tombol">Pesan Sekarang</a>
         </div>
 
-        <div class="paket">
-            <div class="header hijau">
+        <!-- Paket Profesional -->
+        <div class="paket profesional">
+            <div class="header">
                 <h4>Paket Profesional</h4>
-                <p>Rp 480.000,-</p>
+                <p>Rp 600.000,-</p>
             </div>
 
             <div class="isi">
@@ -55,7 +158,7 @@
                 <p>Bonus Domain</p>
             </div>
 
-            <button class="hijau">Pesan Sekarang</button>
+            <a href="#" class="tombol">Pesan Sekarang</a>
         </div>
 
     </div>
