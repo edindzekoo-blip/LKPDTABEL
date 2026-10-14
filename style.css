@@ -41,27 +41,24 @@ h3 {
     font-weight: normal;
 }
 
-/* Mengatur warna tombol Pesan Sekarang */
-.tombol,
-.tombol:link,
-.tombol:visited,
-.tombol:hover,
-.tombol:active {
-    color: white;
-    text-decoration: none;
+a.tombol:link,
+a.tombol:visited,
+a.tombol:hover,
+a.tombol:active {
+    color: white !important;
+    text-decoration: none !important;
 }
 
-/* Warna setiap tombol */
-.tombol.biru {
-    background-color: #2196f3;
+a.tombol.biru {
+    background: #2196f3 !important;
 }
 
-.tombol.oranye {
-    background-color: #ff9800;
+a.tombol.oranye {
+    background: #ff9800 !important;
 }
 
-.tombol.hijau {
-    background-color: green;
+a.tombol.hijau {
+    background: green !important;
 }
 
 .isi {
