@@ -1,0 +1,42 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    max-width: 100%;
+}
+
+.paket {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    padding: 7px;
+    box-shadow: 0 2px 5px #ddd;
+    background-color: white;
+}
+
+.header {
+    height: 92px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.isi {
+    flex: 1;
+}
+
+.tombol {
+    display: block;
+    text-align: center;
+    padding: 14px 5px;
+    margin-top: auto;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
