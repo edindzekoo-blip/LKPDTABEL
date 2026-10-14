@@ -1,0 +1,54 @@
+body {
+    font-family: "Times New Roman", serif;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff0d6;
+}
+
+th {
+    background-color: #483b89;
+    color: white;
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #b7bd8b;
+}
+
+td {
+    padding: 10px 15px;
+    text-align: center;
+    border: 1px solid #a6b47a;
+    white-space: nowrap;
+}
+
+tbody tr {
+    background-color: #fff0d6;
+}
+
+/* Warna saat nama atau data ditekan */
+td span {
+    display: inline-block;
+    cursor: pointer;
+    padding: 3px 5px;
+    border-radius: 4px;
+}
+
+td span:focus {
+    background-color: #2196f3;
+    color: white;
+    outline: none;
+}
+
+/* Warna saat baris ditekan */
+tbody tr:focus-within {
+    background-color: #d5e8ff;
+}
