@@ -124,3 +124,15 @@ a.tombol.hijau {
         padding: 5px 3px;
     }
 }
+
+a.tombol,
+a.tombol:link,
+a.tombol:visited,
+a.tombol:hover,
+a.tombol:active,
+a.tombol:focus {
+    color: white !important;
+    text-decoration: none !important;
+    display: block;
+    text-align: center;
+}
